@@ -54,8 +54,10 @@ class ExcelReader implements CountableReader, \SeekableIterator
         /** @var \PHPExcel $excel */
         $excel = $reader->load($file->getPathname());
 
-        if (null !== $activeSheet) {
+        if (is_int($activeSheet)) {
             $excel->setActiveSheetIndex($activeSheet);
+        } else if (is_string($activeSheet)) {
+            $excel->setActiveSheetIndexByName($activeSheet);
         }
 
         $this->worksheet = $excel->getActiveSheet()->toArray();
