@@ -45,8 +45,8 @@
     },
     "autoload": {
         "psr-4": {
-            "Mikifus\\DataImport\\": "src/",
-            "Mikifus\\DataImport\\Tests\\": "tests/"
+            "Ddeboer\\DataImport\\": "src/",
+            "Ddeboer\\DataImport\\Tests\\": "tests/"
         }
     }
 }
